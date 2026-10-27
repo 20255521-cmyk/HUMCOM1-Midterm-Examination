@@ -1,221 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CAYSO MIDTERM PORTFOLIO - Media</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAYSO MIDTERM PORTFOLIO</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Times New Roman', Times, serif;
-    }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+}
 
-    body {
-      background-color: #d6d6d6;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
+body {
+    background-color: #d6d6d6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-    header {
-      background-color: #22252A;
-      color: #ffffff;
-      padding: 15px 20px;
-      text-align: center;
-    }
+header {
+    background-color: #22252A;
+    color: #fff;
+    padding: 15px 20px;
+    text-align: center;
+}
 
-    .brand-title {
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-      font-weight: bold;
-      margin-bottom: 12px;
-    }
+.brand-title {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
 
-    nav {
-      background-color: #22252A;
-      padding: 8px 0;
-    }
+nav {
+    background-color: #22252A;
+    padding: 8px 0;
+}
 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.active {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 4px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.page {
+    display: none;
+    width: 100%;
+    max-width: 850px;
+}
+
+.page.active {
+    display: block;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(8, 8, 8, 0.2);
+}
+
+.card h1 {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #cbd2c8;
+    border: 2px solid #a3ae9f;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #222121;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #151d11;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #282e27;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.85rem;
+    color: #222121;
+}
+
+caption {
+    font-weight: bold;
+    padding: 12px;
+    color: #000;
+    font-size: 1rem;
+}
+
+th, td {
+    border: 1px solid #888;
+    padding: 12px;
+    text-align: left;
+}
+
+thead, tfoot {
+    background-color: #e5e5e5;
+}
+
+.media-link {
+    font-size: 0.85rem;
+    margin: 20px 0;
+}
+
+figure {
+    margin: 20px 0;
+}
+
+audio {
+    width: 100%;
+    max-width: 450px;
+    margin: 10px 0;
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #222121;
+    margin-top: 8px;
+}
+
+form {
+    max-width: 500px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+fieldset {
+    border: 1px solid #999;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    padding: 0 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    background-color: #fff;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid #777;
+    outline-offset: 1px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+footer {
+    background-color: #151d12;
+    color: #c2c9bf;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 600px) {
     nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
+        gap: 15px;
     }
 
     nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      font-weight: bold;
-    }
-
-    nav a.active,
-    nav a:hover {
-      color: #f8f5f5;
-      border-bottom: 2px solid #ffffff;
-      padding-bottom: 2px;
+        font-size: 0.75rem;
     }
 
     main {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 50px 30px;
+        padding: 25px 10px;
     }
 
     .card {
-      background-color: #ffffff;
-      border-radius: 12px;
-      padding: 40px;
-      max-width: 850px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(8, 8, 8, 0.2);
-    }
-
-    .card h1 {
-      font-size: 1.5rem;
-      letter-spacing: 1.5px;
-      color: #000000;
-      margin-bottom: 15px;
-    }
-  .avatar-group {
-      display: flex;
-      justify-content: center;
-      gap: 35px;
-      margin-bottom: 5px;
+        padding: 25px 15px;
     }
 
     .avatar {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      background-color: #cbd2c8;
-      border: 2px solid #a3ae9f;
+        width: 130px;
+        height: 130px;
     }
 
-    .description {
-      font-size: 0.85rem;
-      color: #222121;
-      line-height: 1.7;
-      margin-bottom: 20px;
+    table {
+        font-size: 0.72rem;
     }
 
-    figure {
-      margin: 20px 0;
+    th, td {
+        padding: 7px 5px;
+        overflow-wrap: anywhere;
     }
 
-    audio {
-      width: 100%;
-      max-width: 450px;
-      margin: 10px 0;
+    fieldset {
+        padding: 15px;
     }
-
-    figcaption {
-      font-size: 0.85rem;
-      color: #222121;
-      margin-top: 8px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #151d11;
-      color: #ffffff;
-      padding: 10px 24px;
-      border-radius: 20px;
-      text-decoration: none;
-      font-size: 0.8rem;
-      letter-spacing: 1px;
-      transition: background-color 0.2s ease;
-      margin-top: 15px;
-    }
-
-    .btn:hover {
-      background-color: #282e27;
-    }
-
-    footer {
-      background-color: #151d12;
-      color: #c2c9bf;
-      text-align: center;
-      padding: 12px;
-      font-size: 0.75rem;
-    }
-
-    @media (max-width: 600px) {
-      nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-      }
-
-      nav a {
-        font-size: 0.75rem;
-      }
-
-      main {
-        padding: 25px 15px;
-      }
-
-      .card {
-        padding: 30px 15px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="brand-title">
-      <span>Xyla's Midterm Portfolio</span>
-    </div>
+<header>
+    <div class="brand-title">Xyla's Midterm Portfolio</div>
 
     <nav>
-      <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
-        <li><a href="services.html">SERVICES</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
-      </ul>
+        <ul>
+            <li><a href="#home" class="active" onclick="showPage('home', this)">HOME</a></li>
+            <li><a href="#about" onclick="showPage('about', this)">ABOUT</a></li>
+            <li><a href="#services" onclick="showPage('services', this)">SERVICES</a></li>
+            <li><a href="#media" onclick="showPage('media', this)">MEDIA</a></li>
+            <li><a href="#contact" onclick="showPage('contact', this)">CONTACT</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <div class="card">
-       
-              <div class="avatar-group">
-        <img src="637451566_891427213813645_9042410328689051882_n.jpg" alt="Avatar 1" class="avatar">
-      </div>
+<main>
 
-      <h1>MEDIA SHOWCASE</h1>
-      
-      <figure>
-        <audio controls>
-          <source src="Top 5 Meme Sound Effect l 2026.mp3" type="audio/mpeg">
-          Your browser does not support audio.
-        </audio>
+    <!-- HOME -->
+    <section id="home" class="page active">
+        <div class="card">
+            <h1>WELCOME HOME</h1>
 
-        <figcaption>
-          Figure 1: Audio introduction detailing
-        </figcaption>
-      </figure>
+            <img
+                src="520317358_718946691061699_3843730020842625928_n.jpg"
+                alt="Home profile"
+                class="avatar"
+            >
 
-      <a href="index.html" class="btn">BACK HOME</a>
+            <p class="description">
+                Welcome to my creative space. This website showcases my
+                interests, creativity, and learning journey in HUMCOM.
+                I aim to create simple, organized, and user-friendly websites.
+            </p>
 
-    </div>
-  </main>
+            <button class="btn" onclick="showPage('about')">ABOUT ME</button>
+        </div>
+    </section>
 
-  <footer>
-    &copy; Laxy OF 2027 - Examination
-  </footer>
+    <!-- ABOUT -->
+    <section id="about" class="page">
+        <div class="card">
+            <img
+                src="557633969_781066951516339_4544857357726531151_n.jpg"
+                alt="Xyla Cayso's profile"
+                class="avatar"
+            >
+
+            <h1>ABOUT ME</h1>
+
+            <p class="description">
+                My name is Xyla Cayso, and I am an Information Technology
+                student interested in web development and technology.
+            </p>
+
+            <p class="description">
+                I enjoy learning how to design and develop websites that
+                are simple, organized, and user-friendly.
+            </p>
+
+            <button class="btn" onclick="showPage('services')">
+                VIEW SERVICES
+            </button>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="page">
+        <div class="card">
+            <h1>SERVICES &amp; RATES</h1>
+
+            <img
+                src="612276747_853752857581081_3575244704501551384_n.jpg"
+                alt="Services profile"
+                class="avatar"
+            >
+
+            <table>
+                <caption>My Services</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Service Item</th>
+                        <th scope="col">Turnaround</th>
+                        <th scope="col">Rate (PHP)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Semantic HTML Structuring</th>
+                        <td>2 Days</td>
+                        <td>₱3,000</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Flexbox Layout Optimization</th>
+                        <td>3 Days</td>
+                        <td>₱5,000</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">WCAG Accessibility Audit</th>
+                        <td>1 Day</td>
+                        <td>₱2,500</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            Note: Rates are fixed for evaluation.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <button class="btn" onclick="showPage('contact')">
+                CONTACT ME
+            </button>
+        </div>
+    </section>
+
+    <!-- MEDIA -->
+    <section id="media" class="page">
+        <div class="card">
+            <img
+                src="637451566_891427213813645_9042410328689051882_n.jpg"
+                alt="Media profile"
+                class="avatar"
+            >
+
+            <h1>MEDIA SHOWCASE</h1>
+
+            <p class="description">
+                Listen to the audio featured in my portfolio.
+            </p>
+
+            <figure>
+                <audio controls>
+                    <source
+                        src="Top 5 Meme Sound Effect l 2026.mp3"
+                        type="audio/mpeg"
+                    >
+                    Your browser does not support audio.
+                </audio>
+
+                <figcaption>
+                    Figure 1: Audio introduction
+                </figcaption>
+            </figure>
+
+            <button class="btn" onclick="showPage('home')">
+                BACK HOME
+            </button>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page">
+        <div class="card">
+            <img
+                src="829910063_1076567691966262_2233556572626542054_n.jpg"
+                alt="Contact profile"
+                class="avatar"
+            >
+
+            <h1>CONTACT ME</h1>
+
+            <p class="description">
+                Feel free to send me a message using the form below.
+            </p>
+
+            <form id="contactForm">
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message"
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <p id="formMessage" class="description"
+                       role="status" aria-live="polite"></p>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    &copy; Xyla Cayso - 2027 Examination
+</footer>
+
+<script>
+function showPage(pageId, clickedLink) {
+    document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    const selectedPage = document.getElementById(pageId);
+
+    if (selectedPage) {
+        selectedPage.classList.add("active");
+    }
+
+    document.querySelectorAll("nav a").forEach(function(link) {
+        link.classList.remove("active");
+    });
+
+    const activeLink = clickedLink ||
+        document.querySelector('nav a[href="#' + pageId + '"]');
+
+    if (activeLink) {
+        activeLink.classList.add("active");
+    }
+}
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("formMessage").textContent =
+        "Thank you! Your message has been prepared successfully.";
+
+    this.reset();
+});
+</script>
 
 </body>
 </html>

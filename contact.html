@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SALDO MIDTERM PORTFOLIO - Contact</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    body {
+      background-color: #d6d6d6;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #22252A;
+      color: #ffffff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .brand-title {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+
+    nav {
+      background-color: #22252A;
+      padding: 8px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    nav a.active,
+    nav a:hover {
+      color: #f8f5f5;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 2px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 30px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 850px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(8, 8, 8, 0.2);
+    }
+
+    .card h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1.5px;
+      color: #000000;
+      margin-bottom: 15px;
+    }
+  .avatar-group {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 5px;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #cbd2c8;
+      border: 2px solid #a3ae9f;
+    }
+
+    .description {
+      font-size: 0.85rem;
+      color: #222121;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 20px auto 0;
+      text-align: left;
+    }
+
+    fieldset {
+      border: 1px solid #999999;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    legend {
+      padding: 0 8px;
+      font-weight: bold;
+      font-size: 0.95rem;
+      color: #222121;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 5px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #222121;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #999999;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #222121;
+      background-color: #ffffff;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: 2px solid #777777;
+      outline-offset: 1px;
+    }
+
+    textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      display: inline-block;
+      background-color: #151d11;
+      color: #ffffff;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 24px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #282e27;
+    }
+
+    footer {
+      background-color: #151d12;
+      color: #c2c9bf;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        font-size: 0.75rem;
+      }
+
+      main {
+        padding: 25px 15px;
+      }
+
+      .card {
+        padding: 30px 15px;
+      }
+
+      fieldset {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand-title">
+      <span>Xyla's Midterm Portfolio</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html" class="active">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+
+          <div class="avatar-group">
+        <img src="829910063_1076567691966262_2233556572626542054_n.jpg" alt="Avatar 1" class="avatar">
+      </div>
+
+      <h1>CONTACT ME</h1>
+
+      <p class="description">
+        Feel free to send me a message using the form below.
+      </p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Contact Information</legend>
+
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          >
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message"
+            required
+          ></textarea>
+
+          <button type="submit">SUBMIT</button>
+        </fieldset>
+      </form>
+
+    </div>
+  </main>
+
+  <footer>
+    &copy; Laxy OF 2027 - Examination
+  </footer>
+
+</body>
+</html>

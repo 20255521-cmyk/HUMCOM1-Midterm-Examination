@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAYSO MIDTERM PORTFOLIO</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Times New Roman', Times, serif, sans-serif;
+    }
+
+    body {
+      background-color: #d6d6d6;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #22252A;
+      color: #ffffff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .brand-title {
+      font-size: 1.2rem;
+      letter-spacing: 2px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px; 
+    }
+
+    nav {
+      background-color: #22252A;
+      padding: 8px 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+    nav a.active, nav a:hover {
+      color: #f8f5f5;
+      border-bottom: 2px solid #ffffff;
+      padding-bottom: 2px;
+    }
+
+     main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 30px;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 850px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .card {
+       box-shadow: 0 10px 25px rgba(8, 8, 8, 0.2);
+      }
+    .card h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1.5px;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+
+    .card .subtitle {
+      font-size: 0.9rem;
+      color: #000000;
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+
+    .avatar-group {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 5px;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #cbd2c8;
+      border: 2px solid #a3ae9f;
+    }
+
+    .description {
+      font-size: 0.85rem;
+      color: #222121;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #151d11;
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #282e27;
+    }
+
+    footer {
+      background-color: #151d12;
+      color: #c2c9bf;
+      text-align: center;
+      padding: 12px;
+      font-size: 0.75rem;
+    }
+  </style>
+</head>
+<body>
+
+
+  <header>
+    <div class="brand-title">
+      <span>Xyla's Midterm Porfolio</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>WELCOME HOME</h1>
+      
+
+      <div class="avatar-group">
+        <img src="520317358_718946691061699_3843730020842625928_n.jpg" alt="Avatar 1" class="avatar">
+      </div>
+
+
+      <p class="description">
+        Welcome to my creative space. This website showcases my interests, creativity, and learning journey in HUMCOM. I aim to create simple, organized, and user-friendly websites.
+      </p>
+
+
+      <a href="about.html" class="btn">ABOUT</a>
+    </div>
+  </main>
+
+
+  <footer>
+    &copy; Laxy OF 2027 - Examination
+  </footer>
+
+
+</body>
+</html>
